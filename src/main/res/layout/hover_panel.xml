@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/transparent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/panel_info"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@id/center_vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/ThemePanel.InHunter"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/panel_status"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/center_vertical"
+        style="@style/ThemePanel.InHunter"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/name_label"
+        android:layout_marginStart="@dimen/dimen_top_bottom_region_item"
+        app:layout_constraintLeft_toLeftOf="@id/panel_info"
+        app:layout_constraintTop_toTopOf="@id/panel_info"
+        app:layout_constraintBottom_toTopOf="@id/tvTypeProfile"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNameProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/dimen_top_bottom_region_item"
+        app:layout_constraintLeft_toRightOf="@id/tvLabelName"
+        app:layout_constraintRight_toRightOf="@id/panel_info"
+        app:layout_constraintTop_toTopOf="@id/panel_info"
+        app:layout_constraintBottom_toTopOf="@id/tvTypeProfile"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelTypePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/type_label"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelName"
+        app:layout_constraintBottom_toTopOf="@id/tvLabelTeamPlayer"
+        app:layout_constraintTop_toBottomOf="@id/tvNameProfile"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTypeProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/tvNameProfile"
+        app:layout_constraintRight_toRightOf="@id/tvNameProfile"
+        app:layout_constraintBottom_toBottomOf="@id/tvLabelTypePlayer" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelTeamPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/team_label"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelTypePlayer"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTeamProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Yandex"
+        app:layout_constraintLeft_toRightOf="@id/tvLabelTeamPlayer"
+        app:layout_constraintRight_toRightOf="@id/tvNameProfile"
+        app:layout_constraintBottom_toBottomOf="@id/tvLabelTeamPlayer" />
+
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/panel_status"
+        app:layout_constraintLeft_toLeftOf="@id/panel_status"
+        app:layout_constraintTop_toTopOf="@id/panel_status"
+        app:layout_constraintBottom_toBottomOf="@id/panel_status"
+        android:textOff="@string/off"
+        android:textOn="@string/in_hunt"
+        android:backgroundTint="@color/purple_200"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

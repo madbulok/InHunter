@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="set_region_name_hint">Введите имя региона</string>
+    <string name="dialog_title">Сохранение региона</string>
+    <string name="dialog_negative_button">Отмена</string>
+    <string name="dialog_positive_button">Сохранить</string>
+    <string name="toast_no_regions_yet">Нет загруженых регионов</string>
+    <string name="map">Карта</string>
+    <string name="type_map">Тип карты</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+    <string name="longitude_label">Долгота</string>
+    <string name="last_update_time_label">Последнее обновление</string>
+    <string name="Профиль">Профиль</string>
+    <string name="profile_settings_category">Профиль</string>
+    <string name="interval_sync_seconds">Интервал отправки данных (сек)</string>
+    <string name="profile_settings_name">Ваше имя</string>
+    <string name="type_player">Тип участника</string>
+    <string name="key_navigate_camera_to_position">key_navigate_camera_to_position</string>
+    <string name="name_label">Имя:</string>
+    <string name="type_label">Тип:</string>
+    <string name="prompt_name">Имя</string>
+    <string name="my_team_title">Мои команды</string>
+    <string name="progile_label">Профиль</string>
+    <string name="logout">Выйти</string>
+    <string name="profile">Профиль</string>
+    <string name="maybe_you_dont_have_teams">Кажется у Вас нет команд...</string>
+    <string name="create">Создать</string>
+    <string name="join">Войти</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <string name="yes">Да</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="please_input_name_region">Введите название леса</string>
+    <string name="loaded_map_label">Загруженные карты</string>
+    <string name="load_map_action">Загрузить карту</string>
+    <string name="quest_load_this_map">Загрузить эту область карты?</string>
+    <string name="empty_loaded_map">У вас пока нет загруженных карт.</string>
+    <string name="end_hunt">Завершить охоту</string>
+    <string name="your_succsses_enter_team">Вы успешно вступили в команду!</string>
+    <string name="no_selected_map">Не выбрано</string>
+    <string name="hunt_is_end">Охота завершена</string>
+    <string name="name_saved_map">Название карты</string>
+    <string name="info_about_team">Данные о команде</string>
+    <string name="name_team">Название команды</string>
+    <string name="number">Номер</string>
+    <string name="iidentificator">Идентификатор</string>
+    <string name="pin_code">PIN-код</string>
+    <string name="team_not_found">Команда не найдена!</string>
+    <string name="data_copied_to_buffer">Данные скопированы</string>
+    <string name="enter_pin">Введите PIN код</string>
+    <string name="error_while_enter_team">Не удалось войти в команду!</string>
+    <string name="min_6_length">Минимум 6 символов!</string>
+    <string name="min_4_length">Минимум 4 символа!</string>
+    <string name="delete_account">Удалить аккаунт</string>
+</resources>

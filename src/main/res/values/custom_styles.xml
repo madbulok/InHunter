@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomCornerRadius">
+        <item name="cornerSizeBottomLeft">32dp</item>
+        <item name="cornerSizeBottomRight">32dp</item>
+    </style>
+
+    <style name="CornerRadius">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CornerRadius10">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="CornerRadiusTop">
+        <item name="cornerSizeTopLeft">32dp</item>
+        <item name="cornerSizeTopRight">32dp</item>
+    </style>
+
+    <style name="CornerRadiusLeft">
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+    </style>
+
+    <style name="CornerRadiusRight">
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
+    </style>
+
+</resources>

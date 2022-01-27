@@ -1,0 +1,40 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/profile_settings_category">
+
+        <EditTextPreference
+            app:key="key_profile_name"
+            app:title="@string/profile_settings_name"
+            app:useSimpleSummaryProvider="true"/>
+
+        <DropDownPreference
+            app:defaultValue="Стрелок"
+            app:entries="@array/type_player_entries"
+            app:entryValues="@array/type_player_entries"
+            app:key="key_type_player"
+            app:title="@string/type_player"
+            app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="@string/map">
+        <ListPreference
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="type_map_key"
+            app:title="@string/type_map"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+        <DropDownPreference
+            app:defaultValue="5"
+            app:entries="@array/interval_entries_values"
+            app:entryValues="@array/interval_entries_values"
+            app:key="key_interval_sync"
+            app:title="@string/interval_sync_seconds"
+            app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

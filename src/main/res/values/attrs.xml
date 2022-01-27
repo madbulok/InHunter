@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandableCardView">
+        <attr name="squeezeDrawable" format="reference" />
+        <attr name="squeezeTitle" format="string" />
+        <attr name="squeezeTitleTextSize" format="dimension" />
+        <attr name="squeezePaddingTopTitle" format="dimension" />
+        <attr name="squeezePaddingLeftTitle" format="dimension" />
+        <attr name="squeezePaddingRightTitle" format="dimension" />
+        <attr name="squeezePaddingBottomTitle" format="dimension" />
+        <attr name="setUnderLineTitle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleExpandableView">
+        <attr name="simpleExDrawable" format="reference" />
+        <attr name="simpleExTitle" format="string" />
+        <attr name="simpleExTitleTextSize" format="dimension" />
+        <attr name="simpleExPaddingTopTitle" format="dimension" />
+        <attr name="simpleExPaddingLeftTitle" format="dimension" />
+        <attr name="simpleExPaddingRightTitle" format="dimension" />
+        <attr name="simpleExPaddingBottomTitle" format="dimension" />
+        <attr name="simpleExsetUnderLineTitle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DraggableLockButton">
+        <attr name="lockTitle" format="string" />
+        <attr name="lockTitleEnd" format="string" />
+        <attr name="lockTitleReady" format="string" />
+        <attr name="lockAlphaBackground" format="integer" />
+        <attr name="lockSwipedColor" format="color" />
+        <attr name="lockBackgroundColor" format="color" />
+        <attr name="lockIcon" format="reference" />
+        <attr name="lockIconTint" format="color" />
+        <attr name="lockIconSize" format="dimension" />
+        <attr name="lockStateButton" format="dimension" >
+            <enum name="ready" value="0" />
+            <enum name="accepted" value="1" />
+            <enum name="locked" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

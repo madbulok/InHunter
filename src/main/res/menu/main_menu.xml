@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_teams"
+        android:icon="@drawable/team_menu_item"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_map"
+        android:icon="@drawable/geo_menu_item"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/profile_settings_menu_item"
+        app:showAsAction="always" />
+
+</menu>
+

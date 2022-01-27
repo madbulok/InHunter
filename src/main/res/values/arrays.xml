@@ -1,0 +1,52 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>MAPBOX_STREETS</item>
+        <item>OUTDOORS</item>
+        <item>LIGHT</item>
+        <item>DARK</item>
+        <item>SATELLITE</item>
+        <item>SATELLITE_STREETS</item>
+        <item>TRAFFIC_DAY</item>
+        <item>TRAFFIC_NIGHT</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>MAPBOX_STREETS</item>
+        <item>OUTDOORS</item>
+        <item>LIGHT</item>
+        <item>DARK</item>
+        <item>SATELLITE</item>
+        <item>SATELLITE_STREETS</item>
+        <item>TRAFFIC_DAY</item>
+        <item>TRAFFIC_NIGHT</item>
+    </string-array>
+
+    <string-array name="interval_entries_values">
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+
+    <string-array name="type_player_entries">
+        <item>Shooter</item>
+        <item>Huntsman</item>
+        <item>Manager</item>
+        <item>Beater</item>
+        <item>Observer</item>
+    </string-array>
+
+    <string-array name="type_player_entries_values">
+        <item>shooter</item>
+        <item>huntsman</item>
+        <item>leader</item>
+        <item>beater</item>
+        <item>Observer</item>
+    </string-array>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/dialog_bg"
+    app:layout_constraintBottom_toBottomOf="@id/rvListMaps"
+    tools:context=".activities.HostActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLabelDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimesion_label_start"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        android:layout_marginEnd="@dimen/dimesion_label_end"
+        android:layout_marginBottom="@dimen/dimension_button_to_label"
+        android:drawableStart="@drawable/ic_outline_bookmark_border"
+        android:drawableEnd="@drawable/ic_baseline_close_24"
+        android:drawablePadding="@dimen/margin_into_container"
+        android:text="@string/loaded_map_label"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_text_label"
+        app:drawableTint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/underlineView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimension_top_underline_label"
+        android:background="@color/cancel_color"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelDialog"
+        app:layout_constraintRight_toRightOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelDialog" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListMaps"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="@dimen/dimesion_label_start"
+        android:layout_marginTop="@dimen/margin_into_container"
+        android:layout_marginBottom="@dimen/margin_into_container"
+        android:layout_marginEnd="@dimen/dimesion_label_end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/underlineView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:itemCount="5"
+        tools:listitem="@layout/region_item" />
+
+    <!--    пустой список-->
+    <TextView
+        android:id="@+id/tvEmptyLoadedMap"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:text="@string/empty_loaded_map"
+        android:textSize="@dimen/font_region"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/underlineView" />
+
+
+    <!--    загрузка-->
+
+    <ProgressBar
+        android:id="@+id/pgLoadSavedMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/main_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="16dp"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:id="@+id/tvLabelDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimesion_bottom_label_dialog"
+        android:layout_marginStart="@dimen/dimension_bottom_btn_dialog"
+        android:layout_marginEnd="@dimen/dimension_bottom_btn_dialog"
+        android:text="@string/name_saved_map"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableEndCompat="@drawable/ic_baseline_close_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutInputText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimesion_bottom_label_dialog"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius_TextInputLayout"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius_TextInputLayout"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius_TextInputLayout"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius_TextInputLayout"
+        app:boxStrokeColor="@color/main_background"
+        app:hintTextColor="@color/main_background"
+        app:layout_constraintBottom_toTopOf="@id/btnAccept"
+        app:layout_constraintEnd_toEndOf="@+id/tvLabelDialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelDialog">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNameRegionMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/please_input_name_region" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimension_height_button_dialog"
+        android:layout_marginTop="@dimen/dimension_button_to_label"
+        android:layout_marginBottom="@dimen/dimension_bottom_btn_dialog"
+        android:layout_marginEnd="@dimen/margin_into_container"
+        android:backgroundTint="@color/cancel_color"
+        android:text="@string/cancel"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/centerGuideline"
+        app:layout_constraintStart_toStartOf="@+id/layoutInputText"
+        app:layout_constraintTop_toBottomOf="@id/layoutInputText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAccept"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimension_height_button_dialog"
+        android:layout_marginTop="@dimen/dimension_button_to_label"
+        android:layout_marginBottom="@dimen/dimension_bottom_btn_dialog"
+        android:layout_marginStart="@dimen/margin_into_container"
+        android:backgroundTint="@color/main_background"
+        android:text="@string/save"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/layoutInputText"
+        app:layout_constraintLeft_toLeftOf="@+id/centerGuideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toBottomOf="@id/layoutInputText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuideline"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBarLoadingMap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:visibility="gone"
+        android:backgroundTint="@color/selected_item"
+        android:indeterminate="false"
+        android:layout_margin="@dimen/dimension_bottom_btn_dialog"
+        app:layout_constraintBottom_toTopOf="@id/btnAccept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDialog"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

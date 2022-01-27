@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.HostActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/profileToolbar"
+            style="@style/InHuntToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/profile_menu"
+            app:title="@string/settings" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewRootS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_marginTop="@dimen/container_into_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CornerRadius"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/profile_into_container"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="@id/profileImage"
+                app:layout_constraintRight_toRightOf="@id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/profileMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/profile_into_container"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/profileName"
+                app:layout_constraintRight_toRightOf="@id/profileName"
+                app:layout_constraintTop_toBottomOf="@id/profileName"
+                tools:text="@tools:sample/us_phones" />
+
+            <TextView
+                android:id="@+id/tvLabelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/container_into_margin"
+                android:text="@string/name_label"
+                android:textSize="14sp"
+                android:textColor="@color/main_background"
+                android:layout_marginTop="@dimen/container_into_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileMail" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardContainerInputLayoutName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/margin_into_container"
+                app:cardCornerRadius="@dimen/corner_radius_TextInputLayout"
+                android:layout_marginTop="@dimen/margin_into_container"
+                android:layout_marginStart="@dimen/container_into_margin"
+                android:layout_marginEnd="@dimen/container_into_margin"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_TextInputLayout"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_TextInputLayout"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_TextInputLayout"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_TextInputLayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelName">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="@tools:sample/first_names"
+                        android:layout_marginStart="@dimen/container_into_margin"
+                        android:layout_marginEnd="@dimen/container_into_margin"
+                        android:background="@drawable/shadow_background_white_rounded"
+                        android:cursorVisible="false"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/tvLabelTypePlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/container_into_margin"
+                android:text="@string/type_label"
+                android:textSize="14sp"
+                android:textColor="@color/main_background"
+                android:layout_marginTop="@dimen/container_into_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardContainerInputLayoutName" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardContainerRVTypes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_into_container"
+                android:layout_marginStart="@dimen/container_into_margin"
+                android:layout_marginEnd="@dimen/container_into_margin"
+                app:cardCornerRadius="@dimen/corner_radius_TextInputLayout"
+                app:cardElevation="@dimen/margin_into_container"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelTypePlayer">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTypesPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/team_item_layout" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/tvLabelTypeMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/container_into_margin"
+                android:text="@string/type_map"
+                android:textSize="14sp"
+                android:textColor="@color/main_background"
+                android:layout_marginTop="@dimen/container_into_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardContainerRVTypes" />
+
+
+            <com.uzlov.inhunter.ui.custom.SimpleExpandableRecyclerView
+                android:id="@+id/listViewMap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_into_container"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelTypeMap"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteAccount"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/transparent"
+                android:textColor="@color/color_shooter"
+                android:text="@string/delete_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_into_container"
+                app:cornerRadius="@dimen/corner_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="@id/cardContainerRVTypes"
+                app:layout_constraintLeft_toLeftOf="@+id/cardContainerRVTypes"
+                app:layout_constraintTop_toBottomOf="@id/listViewMap" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

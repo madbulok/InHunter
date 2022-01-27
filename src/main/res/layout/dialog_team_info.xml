@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/dialog_bg"
+    app:layout_constraintBottom_toBottomOf="@id/rvListMaps"
+    tools:context=".activities.HostActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLabelDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimesion_label_start"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        android:layout_marginEnd="@dimen/dimesion_label_end"
+        android:layout_marginBottom="@dimen/dimension_button_to_label"
+        android:drawableEnd="@drawable/ic_baseline_close_24"
+        android:drawablePadding="@dimen/margin_into_container"
+        android:text="@string/info_about_team"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_text_label"
+        app:drawableTint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/underlineView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimension_top_underline_label"
+        android:background="@color/cancel_color"
+        app:layout_constraintLeft_toLeftOf="@id/tvLabelDialog"
+        app:layout_constraintRight_toRightOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelDialog" />
+
+    <ImageView
+        android:id="@+id/btnCopyData"
+        app:srcCompat="@drawable/ic_baseline_content_copy_24"
+        android:layout_width="@dimen/size_copy_icon"
+        android:layout_height="@dimen/size_copy_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/labelNameTeam"
+        app:layout_constraintEnd_toEndOf="@id/underlineView"
+        app:layout_constraintTop_toTopOf="@+id/labelNameTeam"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/labelNameTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_team"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        app:layout_constraintStart_toStartOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@id/underlineView"/>
+
+    <TextView
+        android:id="@+id/tvNameTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/container_into_margin"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/underlineView"
+        app:layout_constraintStart_toStartOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@id/labelNameTeam"
+        style="@style/TextInfoFields"
+        tools:text="@tools:sample/first_names"/>
+
+    <TextView
+        android:id="@+id/labelNumberTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/iidentificator"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/underlineView"
+        app:layout_constraintStart_toStartOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@id/tvNameTeam" />
+
+
+    <TextView
+        android:id="@+id/tvIdTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/container_into_margin"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/underlineView"
+        app:layout_constraintStart_toStartOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@id/labelNumberTeam"
+        style="@style/TextInfoFields"
+        tools:text="@tools:sample/us_phones"/>
+
+    <TextView
+        android:id="@+id/labelPinTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_code"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/underlineView"
+        app:layout_constraintStart_toStartOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@id/tvIdTeam" />
+
+    <TextView
+        android:id="@+id/tvPinTeam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin_label_dialog"
+        android:layout_marginStart="@dimen/container_into_margin"
+        android:layout_marginBottom="@dimen/top_margin_label_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/underlineView"
+        app:layout_constraintStart_toStartOf="@id/tvLabelDialog"
+        app:layout_constraintTop_toBottomOf="@id/labelPinTeam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/TextInfoFields"
+        tools:text="@tools:sample/us_zipcodes"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

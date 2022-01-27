@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvNameRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_top_bottom_region_item"
+        android:layout_marginBottom="@dimen/dimen_top_bottom_region_item"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/font_region"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/btnRemoveRegion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_top_bottom_region_item"
+        android:layout_marginTop="@dimen/dimen_top_bottom_region_item"
+        android:layout_marginBottom="@dimen/dimen_top_bottom_region_item"
+        android:layout_gravity="end"
+        app:srcCompat="@drawable/ic_outline_delete_outline_24"
+        app:tint="@color/black" />
+</FrameLayout>
